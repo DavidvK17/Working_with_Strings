@@ -12,10 +12,11 @@ function toCamelCase() {
   const arr = testInput.value
     .toLowerCase()
     .split('\n')
-    .forEach(val => {
+    .forEach((val, i) => {
       const [firstWord, secondWord] = val.trim().split('_');
       console.log(
-        [firstWord, secondWord[0].toUpperCase(), secondWord.slice(1)].join('')
+        [firstWord, secondWord[0].toUpperCase(), secondWord.slice(1)].join(''),
+        '✅'.repeat(i + 1)
       );
     });
 }
