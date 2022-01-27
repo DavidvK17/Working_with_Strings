@@ -15,7 +15,9 @@ function toCamelCase() {
     .forEach((val, i) => {
       const [firstWord, secondWord] = val.trim().split('_');
       console.log(
-        [firstWord, secondWord[0].toUpperCase(), secondWord.slice(1)].join(''),
+        [firstWord, secondWord[0].toUpperCase(), secondWord.slice(1)]
+          .join('')
+          .padEnd(20),
         '✅'.repeat(i + 1)
       );
     });
